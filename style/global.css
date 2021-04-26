@@ -2,7 +2,7 @@
     --Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
     --Desaturated-Dark-Blue: hsl(214, 17%, 51%);
     --Grayish-Blue: hsl(212, 23%, 69%);
-    --Light-Grayish-Blue: hsl(210, 46%, 95%);
+    --Light-Grayish-Blue: hsl(210, 80%, 94%);
 }
 
 html {
@@ -16,6 +16,7 @@ html {
 }
 
 body {
+    font-family: 'Manrope';
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -44,7 +45,7 @@ aside, .drawers {
     width: 27.8rem;
     height: 17.5rem;
     padding: 2.5rem;
-    background-color: var(--Light-Grayish-Blue);
+    background-color: white;
     border-radius: 0rem 1rem 1rem 0rem;
 }
 
@@ -60,13 +61,15 @@ aside, .drawers {
 }
 
 .card-text > p {
-    font-size: 0.9rem;
+    margin-top: 1.5rem;
+    font-size: 0.8rem;
     opacity: 0.70;
     width: 21.8rem;
     height: 3.5rem;
 }
 
 .card-profile {
+    margin-top: 1.5rem;
     width: 22.5rem;
     height: 2.5rem;
     display: flex;
@@ -92,15 +95,98 @@ aside, .drawers {
     opacity: 0.50;
 }
 
+.tolltip {
+    display: flex;
+    align-items: center;
+}
+
 #share-img {
-    width: 2.3rem;
-    height: 2rem;
+    width: 1rem;
+    height: .8rem;
+    align-self: center;
     background-color: var(--Light-Grayish-Blue);
     border-radius: 50%;
 }
 
 .hidden {
+    display: flex;
+}
+
+#share-mobile {
     display: none;
+}
+
+.active {
+    display: flex;
+}
+
+.share {
+    display: none;
+}
+
+.tooltip {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.tooltip-text {
+    background-color: var(--Very-Dark-Grayish-Blue);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 13.5rem;
+    height: 3.5rem;
+}
+
+.tooltip-text {
+    border-radius: 1rem;
+    position: absolute;
+    width: 13.5rem;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -6.75rem; 
+    z-index: 2;
+}
+
+.tooltip-text {
+    display: none;
+}
+
+.tooltip:hover .tooltip-text {
+    display: flex;
+}
+
+.box {
+    position: absolute;
+    bottom: -0.10rem;
+    width: 3rem;
+    height: 3rem;
+    transform: rotate(46deg);
+    background-color: var(--Very-Dark-Grayish-Blue);
+    z-index: 0;
+}
+
+.tooltip-text > h1 {
+        font-weight: 100;
+        font-size: .8rem;
+        letter-spacing: 0.4rem;
+        text-transform: none;
+        font-style: normal;
+        text-decoration: none;
+        z-index: 1;
+}
+
+.share-text {
+    color: var(--Light-Grayish-Blue);
+    width: 3.8rem;
+    font-size: 0.90rem;
+}
+
+.img-midia {
+    width: 1rem;
+    height: 1rem;
+    z-index: 1;
 }
 
 @media (max-width: 22rem) {
@@ -148,14 +234,16 @@ aside, .drawers {
     .card-text > h1 {
         width: 16.3rem;
         height: 4.1rem;
-        font-size: 1.1rem;
+        font-size: 1rem;
     }
 
     .card-text > p {
+        text-align: left;
+        margin: 0;
         padding-top: 1.3rem;
         width: 16.3rem;
-        height: 6rem;
-        font-size: 0.8rem;
+        height: 5rem;
+        font-size: 0.7rem;
     }
 
     .card-profile {
@@ -171,9 +259,10 @@ aside, .drawers {
         height: 2.3rem;
     }
 
-    #share-img {
-        width: 1rem;
-        height: 1rem;
+    .share-button {
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
     }
 
     .hidden {
@@ -185,10 +274,36 @@ aside, .drawers {
     }
 
     .share {
-        position: absolute;
+        padding: 0 1.6rem 0 1.8rem;
+        justify-content: space-between;
+        align-items: center;
         width: 20.5rem;
         height: 4rem;
         background-color: var(--Very-Dark-Grayish-Blue);
+        border-radius: 0rem 0rem 1rem 1rem;
+    }
+    
+    .share > h1 {
+        font-weight: 100;
+        font-size: .8rem;
+        letter-spacing: 0.4rem;
+        text-transform: none;
+        font-style: normal;
+        text-decoration: none;
     }
 
+    #share-img-actived {
+        margin-left: 3.1rem;
+        color: var(--Light-Grayish-Blue);
+        background-color: var(--Grayish-Blue);
+    }
+
+    .tolltip-text {
+        display: none;
+    }
+
+    .tooltip:hover .tooltip-text {
+        display: none;
+    }
+    
 }

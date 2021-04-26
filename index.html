@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="/style/global.css">
   <title>Frontend Mentor | Article preview component</title>
@@ -33,23 +34,34 @@
         </p>
       </div>
       
-      <div class="card-profile active">
+      <div id='card-profile' class="card-profile active">
         <img id="michelle-avatar" src="/images/avatar-michelle.jpg" alt="">
         <div class="text-profile">
           <h1>Michelle Appleton</h1>
           <p>28 Jun 2020</p>
         </div>
-        <img id="share-img" src="/images/icon-share.svg" alt="share">
+        <div class="tooltip">
+          <img class="share-button" id="share-img" src="/images/icon-share.svg" alt="share">
+          <span class="tooltip-text">
+            <div class="box"></div>
+            <h1 class="share-text">
+              SHARE
+            </h1>
+            <img class="img-midia" src="/images/icon-facebook.svg" alt="">
+            <img class="img-midia" src="/images/icon-twitter.svg" alt="">
+            <img class="img-midia" src="/images/icon-pinterest.svg" alt="">
+          </span>
+        </div>
       </div>
 
-      <div class="share hidden">
+      <div id='share-painel' class="share share-painel hidden">
         <h1 class="share-text">
           SHARE
         </h1>
         <img class="img-midia" src="/images/icon-facebook.svg" alt="">
         <img class="img-midia" src="/images/icon-twitter.svg" alt="">
         <img class="img-midia" src="/images/icon-pinterest.svg" alt="">
-        <img id="share-img-actived" src="/images/icon-share.svg" alt="share">
+        <img class="share-button" id="share-img-actived" src="/images/icon-share.svg" alt="share">
       </div>
     </main>
     <div class="attribution">
@@ -57,5 +69,6 @@
       Coded by <a href="#">Your Name Here</a>.
     </div>
   </div>
+  <script src="/script/javascript.js"></script>
 </body>
 </html>
